@@ -1,0 +1,5 @@
+name            = Contest
+description     = Provides webform functionality (generation of code and send email/SMS)
+core            = 7.x
+version         = 7.x-1.0
+package         = HedgeComm
