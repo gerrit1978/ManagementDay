@@ -100,6 +100,11 @@ a:link, a:visited {
   color: white;
 }
 
+/** Static pages **/
+.node-type-page .field-name-body {
+  padding: 10px 30px;
+}
+
 /** Inschrijvingsformulier **/
 #node-webform-1 a {
   color: white;
