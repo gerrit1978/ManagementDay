@@ -84,6 +84,7 @@ a:link, a:visited {
 
 #zone-content-wrapper {
   background: url(../img/main_right_bottom.png) no-repeat right bottom;
+  min-height: 550px;
 }
 
 #region-content {
@@ -267,5 +268,3 @@ a:link, a:visited {
 #zone-footer-wrapper #block-block-1 {
   text-indent: -999em;
 }
-
-

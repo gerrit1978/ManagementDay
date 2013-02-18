@@ -1,3 +1,8 @@
+/**
+ * @file
+ * Default jQuery scripts
+ */
+
 jQuery(document).ready(function($) {
 
 	// workshop animation

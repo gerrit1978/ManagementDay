@@ -57,7 +57,7 @@ function hc_twitter_menu() {
   
   $items['admin/config/services/hc_twitter'] = array(
     'title' => 'Twitter Hashtag',
-    'description' => t('Configure the Twitter hashtag to be shown in the Twitter block.'),
+    'description' => 'Configure the Twitter hashtag to be shown in the Twitter block.',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('hc_twitter_admin_form'),
     'file' => 'hc_twitter.admin.inc',
@@ -86,8 +86,8 @@ function hc_twitter_permission() {
  */
 function hc_twitter_block_hc_twitter_render() {
 
-	$path = drupal_get_path('module', 'hc_twitter');
-	$image_path = $path . "/twitter.png";
+  $path = drupal_get_path('module', 'hc_twitter');
+  $image_path = $path . "/twitter.png";
 
   $hashtag = variable_get('hc_twitter_hashtag');
   $url = "http://search.twitter.com/search.json?q=" . $hashtag;
@@ -101,27 +101,25 @@ function hc_twitter_block_hc_twitter_render() {
   if (is_array($results)) {
     for ($i = 0; $i < variable_get('hc_twitter_number', 2); $i++) {
       if (isset($results[$i])) {
-	      $text = $results[$i]->text;
-	      $user = $results[$i]->from_user;
-	      $tweets[] = array('text' => $text, 'user' => $user);
-	    }
+        $text = $results[$i]->text;
+        $user = $results[$i]->from_user;
+        $tweets[] = array('text' => $text, 'user' => $user);
+      }
     }
   }
   
   // contruct final item array
   $items = array();
 
-	foreach ($tweets as $tweet) {
-		$final_text = $tweet['user'] . ": " . $tweet['text'];
-		$final_text_markup = check_markup($final_text);
-
-	  $items[] = array('data' => $final_text_markup);	
-//	  $items[] = array('data' => $tweet['text'] . " (<span style='color: #ed0973;'>" . $tweet['user'] . "</span>)");
-	}
+  foreach ($tweets as $tweet) {
+    $final_text = $tweet['user'] . ": " . $tweet['text'];
+    $final_text_markup = check_markup($final_text);
+    $items[] = array('data' => $final_text_markup);
+  }
   
   $output = "<div class='flexslider'>";  
-	$output .= theme('item_list', array('items' => $items));
+  $output .= theme('item_list', array('items' => $items));
   $output .= "</div>";
-	
-	return $output;
+
+  return $output;
 }

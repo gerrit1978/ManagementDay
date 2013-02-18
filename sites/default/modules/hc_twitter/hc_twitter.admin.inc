@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Admin page with settings form for Twitter block
+ */
+
 function hc_twitter_admin_form($form, &$form_state) {
   $form['hc_twitter_hashtag'] = array(
     '#type' => 'textfield',

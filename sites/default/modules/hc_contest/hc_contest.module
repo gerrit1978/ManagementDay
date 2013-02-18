@@ -3,7 +3,7 @@
 
 /**
  * @file
- *  Send e-mail/SMS with contest code to registrees
+ * Send e-mail/SMS with contest code to registrees
  *
  */
 
@@ -15,22 +15,18 @@ function hc_contest_webform_submission_presave($node, &$submission) {
 
   $mapping = _hc_contest_webform_mapping($node->webform['components']);
 
-	// generate code and store it in webform component
-	$code = _hc_contest_generate_code();
-	$submission->data[$mapping['code']]['value'][0] = $code;
+  // generate code and store it in webform component
+  $code = _hc_contest_generate_code();
+  $submission->data[$mapping['code']]['value'][0] = $code;
 
-	
-	// send e-mail
-	$email = $submission->data[$mapping['e_mailadres']]['value'][0];
+  // send e-mail
+  $email = $submission->data[$mapping['e_mailadres']]['value'][0];
 
-
-
-	// send sms
-	$gsm = $submission->data[$mapping['gsm']]['value'][0];
-	if ($gsm) {
-	  _hc_contest_send_sms($gsm);
-	}
-
+  // send sms
+  $gsm = $submission->data[$mapping['gsm']]['value'][0];
+  if ($gsm) {
+    _hc_contest_send_sms($gsm);
+  }
 
 }
 
@@ -43,7 +39,7 @@ function _hc_contest_webform_mapping($components) {
   $mapping = array();
   
   foreach ($components as $component) {
-    $mapping[$component['form_key']] = $component['cid']	;
+    $mapping[$component['form_key']] = $component['cid'];
   }
   
   return $mapping;
@@ -55,12 +51,12 @@ function _hc_contest_webform_mapping($components) {
  * Helper function for generating code
  */
 function _hc_contest_generate_code($length = 8) {
-	$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-	$code = '';
-	for ($i = 0; $i < $length; $i++) {
-	  $code .= $characters[rand(0, strlen($characters) - 1)];
-	}
-	return $code;
+  $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  $code = '';
+  for ($i = 0; $i < $length; $i++) {
+    $code .= $characters[rand(0, strlen($characters) - 1)];
+  }
+  return $code;
 }
 
 /**
@@ -72,10 +68,10 @@ function _hc_contest_send_sms($gsm) {
   $ch = curl_init(); 
   curl_setopt($ch, CURLOPT_URL, $url); 
   $head = curl_exec($ch); 
-  $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE); 
+  $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE); 
   curl_close($ch); 
   
-  print $httpCode;
+  print $http_code;
   exit();
    
 }
