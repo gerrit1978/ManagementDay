@@ -27,6 +27,10 @@ function hc_contest_webform_submission_presave($node, &$submission) {
 
 	// send sms
 	$gsm = $submission->data[$mapping['gsm']]['value'][0];
+	if ($gsm) {
+	  _hc_contest_send_sms($gsm);
+	}
+
 
 }
 
@@ -57,4 +61,21 @@ function _hc_contest_generate_code($length = 8) {
 	  $code .= $characters[rand(0, strlen($characters) - 1)];
 	}
 	return $code;
+}
+
+/**
+ * Helper function for sending SMS
+ */
+function _hc_contest_send_sms($gsm) {
+  $url = "http://api.clickatell.com/http/sendmsg?user=gerrit1978&password=BVQFSSURIJbGDF&api_id=3412617&to=" . $gsm . "&text=Meet+me+outside";
+  
+  $ch = curl_init(); 
+  curl_setopt($ch, CURLOPT_URL, $url); 
+  $head = curl_exec($ch); 
+  $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE); 
+  curl_close($ch); 
+  
+  print $httpCode;
+  exit();
+   
 }
