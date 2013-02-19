@@ -6,7 +6,8 @@
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   color: white;
-  min-height: 40px;
+  height: 60px;
+  overflow: hidden;
 }
 
 #block-hc-twitter-hc-twitter ul {
