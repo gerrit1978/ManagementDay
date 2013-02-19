@@ -268,3 +268,67 @@ a:link, a:visited {
 #zone-footer-wrapper #block-block-1 {
   text-indent: -999em;
 }
+
+/** Sprekers **/
+.page-sprekers .view-sprekers .item-list {
+  padding: 30px;
+}
+
+.page-sprekers .view-sprekers ul.sprekers {
+  margin: 0;
+  padding: 0;
+}
+
+.page-sprekers .view-sprekers ul.sprekers li.spreker {
+  border-bottom: 2px solid #6e6e6d;
+	list-style: none;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.page-sprekers .view-sprekers ul.sprekers li.spreker.last {
+  border-bottom: none;
+}
+
+.page-sprekers .view-sprekers ul.sprekers li.spreker .naam {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.page-sprekers .view-sprekers ul.sprekers li.spreker .intro {
+  font-style: italic;
+}
+
+.page-sprekers .view-sprekers ul.sprekers li.spreker .profiel li {
+  list-style: disc;
+}
+
+.page-sprekers .view-sprekers ul.sprekers li.spreker .linkedin {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.page-sprekers .view-sprekers ul.sprekers li.spreker .linkedin a {
+  display: block;
+  width: 19px;
+  height: 19px;
+  text-indent: -999em;
+  background: url(../img/spreker_linkedin.jpg) no-repeat left top;
+}
+
+.page-sprekers .view-sprekers ul.sprekers li.spreker .twitter {
+  position: absolute;
+  top: 0px;
+  right: 25px;
+}
+
+.page-sprekers .view-sprekers ul.sprekers li.spreker .twitter a {
+  display: block;
+  width: 19px;
+  height: 19px;
+  text-indent: -999em;
+  background: url(../img/spreker_twitter.jpg) no-repeat left top;
+}
