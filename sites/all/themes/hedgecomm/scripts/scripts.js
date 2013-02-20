@@ -22,4 +22,18 @@ jQuery(document).ready(function($) {
       timeoutDuration: 5000
     }
   });
+  
+/*
+  // drag&drop of workshops
+  $('ul.workshops').sortable({
+    containment: "parent",
+    opacity: 0.6,
+    cursor: 'move',
+		stop: function(event, ui) {
+			var item = ui.item;
+			var index = $(item).index();
+    }  
+  });
+*/
+  
 });

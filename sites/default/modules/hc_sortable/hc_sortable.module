@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * This module replaces the core jquery files with newer ones
+ */
+
+/**
+ * Implements hook_init
+ */
+function hc_sortable_init() {
+  $path = drupal_get_path('module', 'hc_sortable');
+  
+  drupal_add_js($path . '/jquery-ui.js');
+  drupal_add_css($path . '/jquery-ui.css');
+}

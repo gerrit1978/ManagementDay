@@ -189,6 +189,7 @@ a:link, a:visited {
   margin-left: 30px;
 }
 
+/*
 /** Workshops animation **/
 #node-webform-1 #webform-component-workshops ul.workshops {
   margin: 0;
@@ -258,6 +259,7 @@ a:link, a:visited {
 #node-webform-1 #webform-component-workshops ul.workshops li#ws-networking .sub {
   background: url(../img/bg-ws-networking-sub.jpg) no-repeat left top;
 }
+
 
 /** Footer **/
 #zone-footer-wrapper {

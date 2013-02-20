@@ -1,0 +1,5 @@
+name          = Sortable
+description   = Alters the javascript core files with new versions
+package       = HedgeComm
+core          = 7.x
+version       = 7.x-1.0
