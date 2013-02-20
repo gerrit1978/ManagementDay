@@ -30,8 +30,12 @@ jQuery(document).ready(function($) {
     opacity: 0.6,
     cursor: 'move',
 		stop: function(event, ui) {
-			var item = ui.item;
-			var index = $(item).index();
+			var data = "";
+			$('ul.workshops li').each(function() {
+			  var position = $(this).data('order');
+				// store new order in string
+        data += position + ",";
+			});
     }  
   });
 */
