@@ -6,6 +6,10 @@ a:link, a:visited {
   text-decoration: none;
 }
 
+.form-required {
+  display: none;
+}
+
 /** Layout override **/
 .container-12 {
   width: 950px !important;
@@ -79,7 +83,7 @@ a:link, a:visited {
 
 /** Content **/
 #section-content {
-  background: url(../img/main_left_top.png) no-repeat left top;
+  background: url(../img/main_left_top.png) no-repeat left 15px;
 }
 
 #zone-content-wrapper {
@@ -287,6 +291,7 @@ a:link, a:visited {
 	padding-bottom: 20px;
 	margin-bottom: 20px;
 	position: relative;
+	width: 620px;
 }
 
 .page-sprekers .view-sprekers ul.sprekers li.spreker.last {
