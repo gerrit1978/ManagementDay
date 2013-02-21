@@ -39,5 +39,21 @@ jQuery(document).ready(function($) {
     }  
   });
 */
+
+	// read more --> sprekers
+	$('.button .read-more-link').click(function(e) {
+	  e.preventDefault();
+	  $(this).parent().parent().find('.extra-text-inner').slideToggle();
+
+		if ($(this).html() == 'lees meer') {
+		  $(this).html('lees minder');
+		} else {
+		  $(this).html('lees meer');		
+		}
+
+
+	  return false;
+	});
+
   
 });

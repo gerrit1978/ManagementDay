@@ -339,3 +339,17 @@ a:link, a:visited {
   text-indent: -999em;
   background: url(../img/spreker_twitter.jpg) no-repeat left top;
 }
+
+.page-sprekers .view-sprekers ul.sprekers li.spreker .button {
+  margin-bottom: 15px;
+}
+
+.page-sprekers .view-sprekers ul.sprekers li.spreker .button .read-more-link {
+  color: white;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.page-sprekers .view-sprekers ul.sprekers li.spreker .extra-text-inner {
+  display: none;
+}
