@@ -303,6 +303,7 @@ a:link, a:visited {
 .page-sprekers .view-sprekers ul.sprekers li.spreker .foto {
   float: left;
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .page-sprekers .view-sprekers ul.sprekers li.spreker.last {
@@ -360,6 +361,10 @@ a:link, a:visited {
   color: white;
   text-decoration: underline;
   margin-bottom: 20px;
+}
+
+.page-sprekers .view-sprekers ul.sprekers li.spreker .extra-text {
+  clear: left;
 }
 
 .page-sprekers .view-sprekers ul.sprekers li.spreker .extra-text-inner {
