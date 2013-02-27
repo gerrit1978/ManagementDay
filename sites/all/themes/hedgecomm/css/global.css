@@ -159,6 +159,8 @@ a:link, a:visited {
 #node-webform-1 #webform-component-bevestigen {
   clear: both;
   padding: 0 30px;
+  border-top: 5px solid #353534;
+  padding-top: 20px;
 }
 
 #node-webform-1 #webform-component-left .webform-component label {
@@ -214,7 +216,7 @@ a:link, a:visited {
   margin: 0;
   padding: 0;
   position: relative;
-  height: 320px;
+  height: 370px;
   width: 100%;
 }
 
@@ -388,4 +390,26 @@ a:link, a:visited {
 /** Contact pagina **/
 .page-node-9 #block-system-main {
   padding-top: 20px;
+}
+
+/** Explanation teksten voor workshops **/
+#node-webform-1 #webform-component-workshops ul.workshops .inhoud {
+}
+
+#node-webform-1 #webform-component-workshops ul.workshops .inhoud ul li {
+  height: auto !important;
+  float: none;
+  width: auto;
+}
+
+#node-webform-1 #webform-component-workshops ul.workshops .inhoud ul.list-1,
+#node-webform-1 #webform-component-workshops ul.workshops .inhoud ul.list-2,
+#node-webform-1 #webform-component-workshops ul.workshops .inhoud ul.list-3 {
+  font-size: 11px;
+  color: #bababa;
+  width: 30%;
+  margin-right: 2%;
+  float: left;
+  margin: 0;
+  padding-left: 0;
 }
