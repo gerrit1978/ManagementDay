@@ -156,10 +156,18 @@ a:link, a:visited {
   border-top: none;
 }
 
+#node-webform-1 #webform-component-goodiebag {
+  padding-top: 20px;
+  border-top: 5px solid #353534;
+}
+
+#node-webform-1 #webform-component-goodiebag a {
+  text-decoration: none;
+}
+
 #node-webform-1 #webform-component-bevestigen {
   clear: both;
   padding: 0 30px;
-  border-top: 5px solid #353534;
   padding-top: 20px;
 }
 

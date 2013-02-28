@@ -63,6 +63,7 @@ function _hc_contest_generate_code($length = 8) {
  * Helper function for sending SMS
  */
 function _hc_contest_send_sms($gsm, $code) {
+/*
   $gsm_stripped = substr($gsm, 1, 9);
   $gsm_full = "+32" . $gsm_stripped;
 
@@ -77,6 +78,7 @@ function _hc_contest_send_sms($gsm, $code) {
   $head = curl_exec($ch); 
   $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE); 
   curl_close($ch); 
+*/
   
    
 }
